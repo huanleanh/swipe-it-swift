@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var graduation: UITextField!
     @IBOutlet weak var homtown: UITextField!
     @IBOutlet weak var spiritual: UITextField!
+    @IBOutlet weak var nopeButton: UIImageView!
+    @IBOutlet weak var loveButton: UIImageView!
+    @IBOutlet weak var backButton: UIImageView!
     var divisor: CGFloat!
     var index = CLongLong(0)
     
@@ -35,34 +38,12 @@ class ViewController: UIViewController {
         profile(UUID: 2, profileName: "avt2", nameAndAge: "Cuong, 24", location: "Đang ở Bình Dương", graduation: "Bằng cao học", homeTown: "Quê quán Bình Dương", spiritual: "Vô thần")
     ]
     
-   /*
-    let profileList = [String:String] [
-        {
-            "profileName":"avt1",
-            "nameAndAge": "Huan, 26";
-            "location": "Đang ở Thành phố Hồ Chí Minh";
-            "graduation": "Bằng cao đẳng/đại học";
-            "hometown": "Quê quán Dak Lak";
-            "spiritual": "Đạo Phật";
-        },
-        {
-            "profileName": "avt1";
-            "nameAndAge": "Huan, 26";
-            "location": "Đang ở Thành phố Hồ Chí Minh";
-            "graduation": "Bằng cao đẳng/đại học";
-            "hometown": "Quê quán Dak Lak";
-            "spiritual": "Đạo Phật";
-        };
-    ]
-    */
-    
-    
     @IBAction func panProfile(_ sender: UIPanGestureRecognizer) {
         let profile = sender.view!
         let point = sender.translation(in: view)
         
         let howFar = profile.center.x - view.center.x
-        profile.center = CGPoint(x: view.center.x + point.x, y: view.center.y )
+        profile.center = CGPoint(x: view.center.x + point.x, y: view.center.y)
         
         profile.transform = CGAffineTransform(rotationAngle: howFar/divisor)
         
@@ -94,8 +75,8 @@ class ViewController: UIViewController {
                     })
                 }
                 index += 1
-                loadProfile(index: index)
-              UIView.animate(withDuration: 0, animations: {
+                getProfileAtIndex(index: index)
+                UIView.animate(withDuration: 0, animations: {
                     profile.center = self.view.center
                     profile.transform = CGAffineTransform(rotationAngle: 0)
                 })
@@ -109,27 +90,49 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        divisor =  (view.frame.width / 2) / 0.05
-        loadProfile(index: 0)
-//        NSLayoutConstraint.activate([
-//                imageview.heightAnchor.constraint(equalToConstant: 200),
-//                imageview.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
-//                imageview.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-//                imageview.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            ])
-//        let left = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
-//        let right = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
-//        left.direction = .left
-//        right.direction = .right
-//        mainTableView.addGestureRecognizer(left)
-//        mainTableView.addGestureRecognizer(right)
+        uiPrepare()
+        getProfileAtIndex(index: 0)
     }
     
-    func loadProfile(index :CLongLong) {
-        getProfileAtIndex(index: index)
-
+    func uiPrepare() {
+        // divisor use to calculate the rotation
+        divisor =  (view.frame.width / 2) / 0.05
+        
+        backButton.isUserInteractionEnabled = true
+        nopeButton.isUserInteractionEnabled = true
+        loveButton.isUserInteractionEnabled = true
+        
+        //        Rounded nope button
+        nopeButton.layer.borderWidth = 3
+        nopeButton.layer.borderColor = UIColor.purple.cgColor
+        nopeButton.layer.masksToBounds = true
+        nopeButton.clipsToBounds = true
+        nopeButton.layer.cornerRadius = nopeButton.frame.height/2
     }
+    
+    
+    @IBAction func backButtonTapped(_ sender: UITapGestureRecognizer) {
+        self.dismiss(animated: true, completion: nil)
+    }
+//    @objc func backButtonTapped(sender: UITapGestureRecognizer) {
+//        if sender.state == .ended {
+//            self.dismiss(animated: true, completion: nil)
+//        }
+//    }
+    
+    @IBAction func loveButtonTapped(_ sender: UITapGestureRecognizer) {
+//        let profile = sender.view!
+//        let point = sender.translation(in: view)
+//
+//        UIView.animate(withDuration: 0.2, animations: {
+//            profile.center = CGPoint(x: profile.center.x + 200, y: profile.center.y)
+//            profile.transform = CGAffineTransform(rotationAngle: 0)
+//        })
+    }
+    
+    @IBAction func nopeButtonTapped(_ sender: UITapGestureRecognizer) {
+    }
+    
     
     func getProfileAtIndex(index: CLongLong) {
         let tmpIndex = index % 2 + 1
@@ -142,6 +145,10 @@ class ViewController: UIViewController {
                 graduation.text = i.graduation
                 homtown.text = i.homeTown
                 spiritual.text = i.spiritual
+                //                self.mainView.backgroundColor = UIColor(patternImage:UIImage(imageLiteralResourceName: i.profileName))
+                //                self.mainView.contentMode = .redraw
+                //                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png"))
+                
             }
         }
     }
@@ -149,27 +156,27 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-//        UIView.transition(with: self.imageview,
-//                          duration: 2.0,
-//                          options: .transitionCrossDissolve,
-//                          animations: {
-//            self.imageview.image = UIImage(imageLiteralResourceName: "2")
-//        }, completion: nil)
+        //        UIView.transition(with: self.imageview,
+        //                          duration: 2.0,
+        //                          options: .transitionCrossDissolve,
+        //                          animations: {
+        //            self.imageview.image = UIImage(imageLiteralResourceName: "2")
+        //        }, completion: nil)
     }
     
-//    @objc func handleSwipes(_ sender: UISwipeGestureRecognizer)
-//    {
-//        if sender.direction == .left
-//        {
-//           print("Swipe left")
-//           // show the view from the right side
-//        }
-//
-//        if sender.direction == .right
-//        {
-//           print("Swipe right")
-//           // show the view from the left side
-//        }
-//    }
+    //    @objc func handleSwipes(_ sender: UISwipeGestureRecognizer)
+    //    {
+    //        if sender.direction == .left
+    //        {
+    //           print("Swipe left")
+    //           // show the view from the right side
+    //        }
+    //
+    //        if sender.direction == .right
+    //        {
+    //           print("Swipe right")
+    //           // show the view from the left side
+    //        }
+    //    }
     
 }
