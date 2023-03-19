@@ -16,24 +16,193 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rM6-QY-o0X">
-                                <rect key="frame" x="76" y="331" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUJ-1y-mOE" customClass="UIViewX">
+                                <rect key="frame" x="0.0" y="74" width="393" height="778"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Huan, 26" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xzQ-cf-njj">
+                                        <rect key="frame" x="15" y="440" width="363" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Quê quán Gia Lai, Vietnam" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9e-Oh-Oce">
+                                        <rect key="frame" x="60" y="500" width="318" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="bgh-9J-Yc8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile1" translatesAutoresizingMaskIntoConstraints="NO" id="37k-P1-yQL">
+                                        <rect key="frame" x="0.0" y="30" width="393" height="400"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="400" id="OMr-Jz-Zcv"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-icon" translatesAutoresizingMaskIntoConstraints="NO" id="8f6-UI-4yx">
+                                        <rect key="frame" x="15" y="500" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Pc4-DJ-zGw"/>
+                                            <constraint firstAttribute="width" constant="30" id="ffZ-XP-B0A"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Quê quán Gia Lai, Vietnam" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O25-d3-lGA">
+                                        <rect key="frame" x="60" y="545" width="318" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="z43-R0-S44"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graduation-cap" translatesAutoresizingMaskIntoConstraints="NO" id="GW5-iR-Af4">
+                                        <rect key="frame" x="15" y="545" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="F6C-d6-8Iw"/>
+                                            <constraint firstAttribute="width" constant="30" id="QC8-47-bpx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Quê quán Gia Lai, Vietnam" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iKB-cR-NXT">
+                                        <rect key="frame" x="60" y="590" width="318" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Uos-au-sAE"/>
+                                            <constraint firstAttribute="height" constant="30" id="tJZ-7w-ZVc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-icon" translatesAutoresizingMaskIntoConstraints="NO" id="YS0-eB-zQ8">
+                                        <rect key="frame" x="15" y="590" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="R6G-lf-coX"/>
+                                            <constraint firstAttribute="width" constant="30" id="bUR-eg-GjM"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Quê quán Gia Lai, Vietnam" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnE-5L-z45">
+                                        <rect key="frame" x="60" y="635" width="318" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="yXk-l4-beO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spiritual-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Bmc-XG-nLG">
+                                        <rect key="frame" x="15" y="635" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="GZX-3Y-Bz3"/>
+                                            <constraint firstAttribute="height" constant="30" id="OwY-n2-GUc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icone-x-violet" translatesAutoresizingMaskIntoConstraints="NO" id="mAt-Gp-Fm5">
+                                        <rect key="frame" x="15" y="-10" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Nbv-kM-eHV"/>
+                                            <constraint firstAttribute="width" constant="30" id="zax-lr-yub"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="wnE-5L-z45" firstAttribute="top" secondItem="iKB-cR-NXT" secondAttribute="bottom" constant="15" id="06e-Tr-fjM"/>
+                                    <constraint firstItem="GW5-iR-Af4" firstAttribute="leading" secondItem="FUJ-1y-mOE" secondAttribute="leading" constant="15" id="4IU-yG-kL7"/>
+                                    <constraint firstItem="O25-d3-lGA" firstAttribute="top" secondItem="Q9e-Oh-Oce" secondAttribute="bottom" constant="15" id="64O-Qk-3zR"/>
+                                    <constraint firstAttribute="trailing" secondItem="xzQ-cf-njj" secondAttribute="trailing" constant="15" id="6hf-pv-7Zq"/>
+                                    <constraint firstItem="YS0-eB-zQ8" firstAttribute="leading" secondItem="FUJ-1y-mOE" secondAttribute="leading" constant="15" id="6i9-je-lbZ"/>
+                                    <constraint firstItem="O25-d3-lGA" firstAttribute="leading" secondItem="GW5-iR-Af4" secondAttribute="trailing" constant="15" id="7ty-sd-nQJ"/>
+                                    <constraint firstItem="mAt-Gp-Fm5" firstAttribute="leading" secondItem="FUJ-1y-mOE" secondAttribute="leading" constant="15" id="8cI-Fe-XTh"/>
+                                    <constraint firstItem="37k-P1-yQL" firstAttribute="top" secondItem="mAt-Gp-Fm5" secondAttribute="bottom" constant="10" id="Ago-3U-jRB"/>
+                                    <constraint firstAttribute="trailing" secondItem="iKB-cR-NXT" secondAttribute="trailing" constant="15" id="EOp-5G-LjO"/>
+                                    <constraint firstItem="8f6-UI-4yx" firstAttribute="top" secondItem="xzQ-cf-njj" secondAttribute="bottom" constant="15" id="Ghw-tr-fLl"/>
+                                    <constraint firstItem="8f6-UI-4yx" firstAttribute="leading" secondItem="FUJ-1y-mOE" secondAttribute="leading" constant="15" id="IZG-3g-OdW"/>
+                                    <constraint firstItem="iKB-cR-NXT" firstAttribute="leading" secondItem="YS0-eB-zQ8" secondAttribute="trailing" constant="15" id="J8c-T2-PYJ"/>
+                                    <constraint firstItem="37k-P1-yQL" firstAttribute="top" secondItem="FUJ-1y-mOE" secondAttribute="top" constant="30" id="Jbc-6i-mHo"/>
+                                    <constraint firstItem="Q9e-Oh-Oce" firstAttribute="top" secondItem="xzQ-cf-njj" secondAttribute="bottom" constant="15" id="JzM-Mz-8bR"/>
+                                    <constraint firstAttribute="trailing" secondItem="wnE-5L-z45" secondAttribute="trailing" constant="15" id="QpH-vC-skX"/>
+                                    <constraint firstItem="YS0-eB-zQ8" firstAttribute="top" secondItem="GW5-iR-Af4" secondAttribute="bottom" constant="15" id="X5j-SM-IxX"/>
+                                    <constraint firstItem="xzQ-cf-njj" firstAttribute="leading" secondItem="FUJ-1y-mOE" secondAttribute="leading" constant="15" id="YdV-Yh-qlj"/>
+                                    <constraint firstAttribute="trailing" secondItem="O25-d3-lGA" secondAttribute="trailing" constant="15" id="a3U-zg-RH7"/>
+                                    <constraint firstItem="wnE-5L-z45" firstAttribute="leading" secondItem="Bmc-XG-nLG" secondAttribute="trailing" constant="15" id="aJs-eE-CR3"/>
+                                    <constraint firstItem="Q9e-Oh-Oce" firstAttribute="leading" secondItem="8f6-UI-4yx" secondAttribute="trailing" constant="15" id="b6g-fu-sBK"/>
+                                    <constraint firstItem="37k-P1-yQL" firstAttribute="leading" secondItem="FUJ-1y-mOE" secondAttribute="leading" id="crU-KU-e6L"/>
+                                    <constraint firstItem="iKB-cR-NXT" firstAttribute="top" secondItem="O25-d3-lGA" secondAttribute="bottom" constant="15" id="d2N-vX-dED"/>
+                                    <constraint firstItem="GW5-iR-Af4" firstAttribute="top" secondItem="Q9e-Oh-Oce" secondAttribute="bottom" constant="15" id="ffR-Hc-5sC"/>
+                                    <constraint firstItem="Bmc-XG-nLG" firstAttribute="leading" secondItem="FUJ-1y-mOE" secondAttribute="leading" constant="15" id="fzM-np-DHn"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q9e-Oh-Oce" secondAttribute="trailing" constant="15" id="jix-ky-TCZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="37k-P1-yQL" secondAttribute="trailing" id="ll4-N2-Y2z"/>
+                                    <constraint firstItem="xzQ-cf-njj" firstAttribute="top" secondItem="37k-P1-yQL" secondAttribute="bottom" constant="10" id="qbu-O9-V98"/>
+                                    <constraint firstItem="Bmc-XG-nLG" firstAttribute="top" secondItem="YS0-eB-zQ8" secondAttribute="bottom" constant="15" id="tas-TQ-PXl"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="24S-qm-YFU" appends="YES" id="JDO-ii-Tn9"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvL-og-ehA" userLabel="bottomView">
+                                <rect key="frame" x="-27" y="748" width="420" height="70"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-icon" translatesAutoresizingMaskIntoConstraints="NO" id="aMV-x2-XnQ">
+                                        <rect key="frame" x="260" y="5" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Xxg-JU-vbc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icone-x-violet" translatesAutoresizingMaskIntoConstraints="NO" id="ZH6-dk-Jna">
+                                        <rect key="frame" x="100" y="5" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="BOa-5o-gMX"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ZH6-dk-Jna" firstAttribute="centerY" secondItem="dvL-og-ehA" secondAttribute="centerY" id="4Cf-R2-miB"/>
+                                    <constraint firstItem="ZH6-dk-Jna" firstAttribute="top" secondItem="dvL-og-ehA" secondAttribute="top" constant="5" id="4FC-TN-OS2"/>
+                                    <constraint firstAttribute="trailing" secondItem="aMV-x2-XnQ" secondAttribute="trailing" constant="100" id="8fW-GC-hVB"/>
+                                    <constraint firstItem="ZH6-dk-Jna" firstAttribute="leading" secondItem="dvL-og-ehA" secondAttribute="leading" constant="100" id="N3b-pA-hO5"/>
+                                    <constraint firstItem="ZH6-dk-Jna" firstAttribute="bottom" secondItem="aMV-x2-XnQ" secondAttribute="bottom" id="lrX-Fy-9cy"/>
+                                    <constraint firstItem="ZH6-dk-Jna" firstAttribute="top" secondItem="aMV-x2-XnQ" secondAttribute="top" id="uE5-W2-pfo"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FUJ-1y-mOE" secondAttribute="trailing" id="4ej-dW-Tbp"/>
+                            <constraint firstItem="dvL-og-ehA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="DlM-yl-oLC"/>
+                            <constraint firstAttribute="bottom" secondItem="FUJ-1y-mOE" secondAttribute="bottom" id="PTJ-Kb-lLj"/>
+                            <constraint firstItem="FUJ-1y-mOE" firstAttribute="trailing" secondItem="dvL-og-ehA" secondAttribute="trailing" id="hSw-MF-Cyd"/>
+                            <constraint firstItem="dvL-og-ehA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-43" id="m2A-TI-3XN"/>
+                            <constraint firstItem="dvL-og-ehA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="689" id="oYY-So-Etj"/>
+                            <constraint firstItem="FUJ-1y-mOE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ww7-sj-gJc"/>
+                            <constraint firstItem="FUJ-1y-mOE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="zk3-7O-dbi"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageview" destination="rM6-QY-o0X" id="cdM-l8-zTF"/>
+                        <outlet property="avt" destination="37k-P1-yQL" id="QAu-QY-IHi"/>
+                        <outlet property="graduation" destination="O25-d3-lGA" id="qbh-xR-oAv"/>
+                        <outlet property="homtown" destination="iKB-cR-NXT" id="8V3-Nc-go7"/>
+                        <outlet property="location" destination="Q9e-Oh-Oce" id="T0c-Qe-Ffj"/>
+                        <outlet property="mainView" destination="FUJ-1y-mOE" id="qBT-M2-Otl"/>
+                        <outlet property="nameAndAge" destination="xzQ-cf-njj" id="IVJ-7X-WLC"/>
+                        <outlet property="spiritual" destination="wnE-5L-z45" id="xvr-td-02V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="24S-qm-YFU">
+                    <connections>
+                        <action selector="panProfile:" destination="BYZ-38-t0r" id="qDj-Pr-dZl"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="48" y="-2"/>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="graduation-cap" width="512" height="512"/>
+        <image name="heart-icon" width="600" height="557"/>
+        <image name="home-icon" width="1378" height="1300"/>
+        <image name="icone-x-violet" width="512" height="512"/>
+        <image name="location-icon" width="1024" height="1024"/>
+        <image name="profile1" width="828" height="1472"/>
+        <image name="spiritual-icon" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
