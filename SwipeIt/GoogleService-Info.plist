@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1081590072020-iqi6ghob5vo393b5rggi837llbcbv5bs.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1081590072020-iqi6ghob5vo393b5rggi837llbcbv5bs</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBcPaLJpCz2dUBLhTs8_LkmBWcGo153g8Q</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1081590072020</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>abc.com.SwipeIt</string>
+	<key>PROJECT_ID</key>
+	<string>swift-it</string>
+	<key>STORAGE_BUCKET</key>
+	<string>swift-it.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1081590072020:ios:27cc17d04521ce23ce3141</string>
+</dict>
+</plist>

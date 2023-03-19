@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
     
@@ -23,8 +24,8 @@ class ViewController: UIViewController {
     var divisor: CGFloat!
     var index = CLongLong(0)
     
-    struct profile {
-        var UUID: CLongLong
+    struct profile: Codable{
+        var UUID: String
         var profileName: String
         var nameAndAge: String
         var location: String
@@ -34,8 +35,8 @@ class ViewController: UIViewController {
     }
     
     var profileList: [profile] = [
-        profile(UUID: 1, profileName: "avt1", nameAndAge: "Anh Huân, 26", location: "Đang ở Thành phố Hồ Chí Minh", graduation: "Bằng cao đẳng/đại học", homeTown: "Quê quán Dak Lak", spiritual: "Đạo Phật"),
-        profile(UUID: 2, profileName: "avt2", nameAndAge: "Cuong, 24", location: "Đang ở Bình Dương", graduation: "Bằng cao học", homeTown: "Quê quán Bình Dương", spiritual: "Vô thần")
+        profile(UUID: "1", profileName: "avt1", nameAndAge: "Anh Huân, 26", location: "Đang ở Thành phố Hồ Chí Minh", graduation: "Bằng cao đẳng/đại học", homeTown: "Quê quán Dak Lak", spiritual: "Đạo Phật"),
+        profile(UUID: "2", profileName: "avt2", nameAndAge: "Cuong, 24", location: "Đang ở Bình Dương", graduation: "Bằng cao học", homeTown: "Quê quán Bình Dương", spiritual: "Vô thần")
     ]
     
     @IBAction func panProfile(_ sender: UIPanGestureRecognizer) {
@@ -75,7 +76,7 @@ class ViewController: UIViewController {
                     })
                 }
                 index += 1
-                getProfileAtIndex(index: index)
+                getProfileAtIndex()
                 UIView.animate(withDuration: 0, animations: {
                     profile.center = self.view.center
                     profile.transform = CGAffineTransform(rotationAngle: 0)
@@ -91,7 +92,42 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         uiPrepare()
-        getProfileAtIndex(index: 0)
+        getProfileFromServer()
+        getProfileAtIndex()
+        
+    }
+    
+    func getProfileFromServer() {
+        
+        let db = Firestore.firestore()
+        db.collection("swipeIt").getDocuments() { [self] (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                
+                if let array = querySnapshot.value as? [[String: Any]] {
+                    for aValue in array {
+                        let profileName = aValue["profileName"] as? String ?? "avtNil"
+                        let nameAndAge = aValue["nameAndAge"] as? String ?? "unnamed"
+                        let graduation = aValue["graduation"] as? String ?? ""
+                        let hometown = aValue["hometown"] as? String ?? ""
+                        let spiritual = aValue["spiritual"] as? String ?? ""
+                        let location = aValue["location"] as? String ?? ""
+                        let _p = profile(profileName: profileName, nameAndAge: nameAndAge, location: location, graduation: graduation, homeTown: hometown, spiritual: spiritual)
+                        self.profileList.append(_p)
+                    }
+                }
+//                    let decoder = JSONDecoder()
+//                    var dict = document.data()
+//                        for (key, value) in dict! {
+//                    if let data = try?  JSONSerialization.data(withJSONObject: dict, options: []) {
+//                        print("=> \(data)")
+//                        let _profile = try? decoder.decode(profile.self, from: data)
+////                        profileList.append(_profile!)
+//                           }
+//                        }
+            }
+        }
     }
     
     func uiPrepare() {
@@ -134,23 +170,28 @@ class ViewController: UIViewController {
     }
     
     
-    func getProfileAtIndex(index: CLongLong) {
-        let tmpIndex = index % 2 + 1
-        for i in profileList {
-            if i.UUID == tmpIndex {
-                self.avt.image = UIImage(imageLiteralResourceName: i.profileName)
-                self.avt.contentMode = .scaleAspectFill
-                nameAndAge.text = i.nameAndAge
-                location.text = i.location
-                graduation.text = i.graduation
-                homtown.text = i.homeTown
-                spiritual.text = i.spiritual
-                //                self.mainView.backgroundColor = UIColor(patternImage:UIImage(imageLiteralResourceName: i.profileName))
-                //                self.mainView.contentMode = .redraw
-                //                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png"))
-                
-            }
+    func getProfileAtIndex() {
+//        let tmpIndex = index % 2 + 1
+//        for i in profileList {
+//            if i.UUID == tmpIndex {
+        if profileList.capacity > 0 {
+            let i = profileList.popLast()
+            self.avt.image = UIImage(imageLiteralResourceName: i?.profileName ?? "avt1")
+            self.avt.contentMode = .scaleAspectFill
+            nameAndAge.text = i?.nameAndAge
+            location.text = i?.location
+            graduation.text = i?.graduation
+            homtown.text = i?.homeTown
+            spiritual.text = i?.spiritual
+            //                self.mainView.backgroundColor = UIColor(patternImage:UIImage(imageLiteralResourceName: i.profileName))
+            //                self.mainView.contentMode = .redraw
+            //                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png"))
+        } else {
+            print("out of index")
+            return
         }
+//            }
+//        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

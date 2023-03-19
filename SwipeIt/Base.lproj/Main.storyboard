@@ -116,7 +116,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="7wU-UO-d27"/>
                                     <constraint firstAttribute="width" constant="60" id="Xxg-JU-vbc"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="wwg-85-rpr"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="4fp-Zz-lTk" appends="YES" id="1GQ-ze-ONf"/>
@@ -127,7 +126,6 @@
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="BOa-5o-gMX"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="I84-7B-H30"/>
                                     <constraint firstAttribute="height" constant="60" id="sLF-ok-MH6"/>
                                 </constraints>
                                 <connections>
@@ -181,7 +179,6 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Quê quán Gia Lai, Vietnam" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iKB-cR-NXT">
                                         <rect key="frame" x="60" y="585" width="318" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Uos-au-sAE"/>
                                             <constraint firstAttribute="height" constant="30" id="tJZ-7w-ZVc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -190,7 +187,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-icon" translatesAutoresizingMaskIntoConstraints="NO" id="YS0-eB-zQ8">
                                         <rect key="frame" x="15" y="585" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="R6G-lf-coX"/>
+                                            <constraint firstAttribute="height" constant="30" id="1c5-PX-kni"/>
                                             <constraint firstAttribute="width" constant="30" id="bUR-eg-GjM"/>
                                         </constraints>
                                     </imageView>
@@ -236,7 +233,6 @@
                                     <constraint firstItem="iKB-cR-NXT" firstAttribute="leading" secondItem="YS0-eB-zQ8" secondAttribute="trailing" constant="15" id="J8c-T2-PYJ"/>
                                     <constraint firstItem="Q9e-Oh-Oce" firstAttribute="top" secondItem="xzQ-cf-njj" secondAttribute="bottom" constant="15" id="JzM-Mz-8bR"/>
                                     <constraint firstAttribute="trailing" secondItem="wnE-5L-z45" secondAttribute="trailing" constant="15" id="QpH-vC-skX"/>
-                                    <constraint firstItem="YS0-eB-zQ8" firstAttribute="top" secondItem="GW5-iR-Af4" secondAttribute="bottom" constant="15" id="X5j-SM-IxX"/>
                                     <constraint firstItem="xzQ-cf-njj" firstAttribute="leading" secondItem="FUJ-1y-mOE" secondAttribute="leading" constant="15" id="YdV-Yh-qlj"/>
                                     <constraint firstAttribute="trailing" secondItem="O25-d3-lGA" secondAttribute="trailing" constant="15" id="a3U-zg-RH7"/>
                                     <constraint firstItem="wnE-5L-z45" firstAttribute="leading" secondItem="Bmc-XG-nLG" secondAttribute="trailing" constant="15" id="aJs-eE-CR3"/>
@@ -245,12 +241,13 @@
                                     <constraint firstItem="iKB-cR-NXT" firstAttribute="top" secondItem="O25-d3-lGA" secondAttribute="bottom" constant="15" id="d2N-vX-dED"/>
                                     <constraint firstItem="GW5-iR-Af4" firstAttribute="top" secondItem="Q9e-Oh-Oce" secondAttribute="bottom" constant="15" id="ffR-Hc-5sC"/>
                                     <constraint firstItem="Bmc-XG-nLG" firstAttribute="leading" secondItem="FUJ-1y-mOE" secondAttribute="leading" constant="15" id="fzM-np-DHn"/>
+                                    <constraint firstItem="YS0-eB-zQ8" firstAttribute="top" secondItem="GW5-iR-Af4" secondAttribute="bottom" constant="15" id="g0P-T9-FtP"/>
                                     <constraint firstItem="37k-P1-yQL" firstAttribute="top" secondItem="mAt-Gp-Fm5" secondAttribute="bottom" id="heZ-cj-jd9"/>
                                     <constraint firstAttribute="trailing" secondItem="Q9e-Oh-Oce" secondAttribute="trailing" constant="15" id="jix-ky-TCZ"/>
                                     <constraint firstItem="mAt-Gp-Fm5" firstAttribute="top" secondItem="FUJ-1y-mOE" secondAttribute="top" constant="5" id="jyB-iZ-T3C"/>
                                     <constraint firstAttribute="trailing" secondItem="37k-P1-yQL" secondAttribute="trailing" id="ll4-N2-Y2z"/>
                                     <constraint firstItem="xzQ-cf-njj" firstAttribute="top" secondItem="37k-P1-yQL" secondAttribute="bottom" constant="10" id="qbu-O9-V98"/>
-                                    <constraint firstItem="Bmc-XG-nLG" firstAttribute="top" secondItem="YS0-eB-zQ8" secondAttribute="bottom" constant="15" id="tas-TQ-PXl"/>
+                                    <constraint firstItem="Bmc-XG-nLG" firstAttribute="top" secondItem="YS0-eB-zQ8" secondAttribute="bottom" constant="15" id="x28-J5-a1V"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="24S-qm-YFU" appends="YES" id="JDO-ii-Tn9"/>
@@ -264,6 +261,7 @@
                             <constraint firstAttribute="trailing" secondItem="FUJ-1y-mOE" secondAttribute="trailing" id="4ej-dW-Tbp"/>
                             <constraint firstItem="ZH6-dk-Jna" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="O4T-A7-2gq"/>
                             <constraint firstItem="aMV-x2-XnQ" firstAttribute="top" secondItem="FUJ-1y-mOE" secondAttribute="bottom" constant="15" id="ZfN-Rd-NYa"/>
+                            <constraint firstItem="ZH6-dk-Jna" firstAttribute="top" secondItem="FUJ-1y-mOE" secondAttribute="bottom" constant="15" id="iEd-sM-ZZR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aMV-x2-XnQ" secondAttribute="trailing" constant="100" id="mhW-hn-8lv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZH6-dk-Jna" secondAttribute="bottom" constant="5" id="t6A-Zs-CB1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aMV-x2-XnQ" secondAttribute="bottom" constant="5" id="uca-4g-sTE"/>
