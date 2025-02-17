@@ -41,7 +41,7 @@ jobs:
 
       # 6. Upload file IPA vào Artifact (Tải xuống từ GitHub Action)
       - name: Upload IPA Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: SwipeIt.ipa
           path: swipe-it-swift/output/*.ipa
