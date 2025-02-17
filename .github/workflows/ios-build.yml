@@ -23,12 +23,12 @@ jobs:
         run: xcodebuild -resolvePackageDependencies
 
       - name: 🏗️ Build & Archive app
-        run: |
-          xcodebuild -project SwipeIt.xcodeproj \
-                     -scheme SwipeIt \
-                     -sdk iphoneos \
-                     -configuration Release \
-                     -archivePath build/SwipeIt.xcarchive archive
+        run: xcodebuild -scheme SwipeIt 
+              -project SwipeIt.xcodeproj 
+              -configuration Release 
+              -archivePath ./build/SwipeIt.xcarchive archive 
+              -allowProvisioningUpdates
+
 
       # 5. Xuất file IPA
       - name: Export IPA
