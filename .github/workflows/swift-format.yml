@@ -24,7 +24,7 @@ jobs:
       - name: Commit changes
         run: |
           git config --global user.name 'Huan Le A.'
-          git config --global user.email 'huanleanhit@gmail.com'
+          git config --global user.email 'leanhhuanit@gmail.com'
           git add .
           git commit -m "Apply swift linting + formatting" || echo "No changes"
           git push
