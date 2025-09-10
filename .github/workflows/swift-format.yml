@@ -1,31 +1,31 @@
 name: SwiftFormat Check
 
 on:
-  pull_request:
-  push:
-    branches: [ main ]
+	pull_request:
+	push:
+	branches: [ main ]
 permissions:
-  contents: write
+	contents: write
 
 jobs:
-  swift-format:
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v3
+	swift-format:
+	runs-on: macos-latest
+	steps:
+	- uses: actions/checkout@v3
 
-      - name: Install SwiftFormat
-        run: |
-          brew install swift-format
+	- name: Install SwiftFormat
+	run: |
+		  brew install swift-format
 
-      - name: Run SwiftFormat and fix
-        run: |
-          swift-format format --in-place --recursive .
+	- name: Run SwiftFormat and fix
+	run: |
+		  swift-format format --in-place --recursive .
 
-      - name: Commit changes
-        run: |
-		  git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add .
-          git commit -m "Apply swift linting + formatting" || echo "No changes"
-          git push
+	- name: Commit changes
+		run: |
+		git config --global user.name 'Huan Le A.'
+			git config --global user.email 'leanhhuanit@gmail.com'
+			git add .
+			git commit -m "Apply swift linting + formatting" || echo "No changes"
+			git push
 
